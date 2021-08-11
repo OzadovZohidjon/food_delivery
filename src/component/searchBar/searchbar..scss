@@ -1,0 +1,57 @@
+$main-font: "Montserrat", sans-serif;
+
+.searchbar {
+	position: fixed;
+	top: 69px;
+	left: 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 40px;
+	background-color: #fbecec;
+	z-index: 10;
+
+	&_block {
+		width: 56%;
+		max-height: 100px;
+		padding: 10px 13px 10px 65px;
+		background-color: #fff;
+		border-radius: 100px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&_input {
+		flex: 1 1 auto;
+		font-family: $main-font;
+		font-style: normal;
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 29px;
+		color: #000;
+		outline: none;
+	}
+
+	&_btn {
+		width: 28.35%;
+		height: 60px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-family: $main-font;
+		font-style: normal;
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 29px;
+		background: #ff8f8f;
+		border-radius: 72px;
+		transition: all 0.3s ease-in-out;
+		cursor: pointer;
+
+		&:hover {
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+		}
+	}
+}

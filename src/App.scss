@@ -1,3 +1,4 @@
+*,
 *::before,
 *::after {
 	margin: 0;
@@ -10,6 +11,10 @@ ul,
 ol,
 li {
 	list-style: none;
+}
+
+.slick-slide a {
+	text-decoration: none;
 }
 
 h1,
@@ -25,6 +30,134 @@ h6 {
 html,
 body {
 	height: 100%;
+	background-color: #fbecec;
 	line-height: 1;
 	font-size: 14px;
+	font-family: "Montserrat", sans-serif;
+}
+
+.container {
+	width: 100%;
+	max-width: calc((100vw * 77 / 100));
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.wrapper {
+	position: relative;
+	width: 100%;
+}
+
+$main-font: "Montserrat", sans-serif;
+
+.meals {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+
+	.meals_item {
+		width: 48%;
+
+		&:nth-child(2n) {
+			margin-right: 0;
+		}
+	}
+}
+
+.meals_item {
+	position: relative;
+	margin-bottom: 25px;
+	overflow: hidden;
+	border-radius: 20px 20px 0 0;
+	cursor: pointer;
+	margin-right: 30px;
+
+	&-img {
+		position: relative;
+		width: 100%;
+		padding-bottom: 50%;
+
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			border-radius: 20px 20px 0 0;
+			object-fit: cover;
+			transition: all 0.3s ease-in-out;
+		}
+	}
+
+	&-content {
+		position: relative;
+		padding: 14px;
+		background-color: #fff;
+		border-radius: 0 0 20px 20px;
+
+		.meals_title {
+			font-family: $main-font;
+			font-size: 16px;
+			font-weight: bold;
+			font-style: normal;
+			color: #000;
+			text-align: center;
+			text-transform: capitalize;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			margin-bottom: 5px;
+		}
+
+		.meals_subtitle {
+			font-family: $main-font;
+			font-size: 14px;
+			font-weight: normal;
+			font-style: normal;
+			color: #2a760f;
+			text-align: center;
+			text-transform: uppercase;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			&-icon {
+				margin-right: 10px;
+			}
+		}
+	}
+
+	&:hover {
+		.meals_item-img {
+			img {
+				transform: scale(1.02);
+			}
+		}
+	}
+}
+.slick-arrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 45px;
+	height: 45px;
+	background-color: #eee;
+	border-radius: 50%;
+	color: #000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&::before {
+		font-size: 35px;
+	}
+}
+
+.slick-prev {
+	left: 0;
+}
+
+.slick-next {
+	right: 0;
 }

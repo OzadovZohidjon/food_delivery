@@ -1,0 +1,94 @@
+$main-font: "Montserrat", sans-serif;
+
+.restaurant_page {
+	position: absolute;
+	top: 70px;
+	width: 100%;
+
+	&-content {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		width: calc((100vw * 77 / 100) * 65 / 100);
+		height: auto;
+	}
+
+	&-header {
+		position: relative;
+		height: 300px;
+		width: 100%;
+		margin-top: 20px;
+		border-radius: 30px;
+		padding: 0 0 20px 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+
+		.header_content {
+			.content_title {
+				h1 {
+					font-family: $main-font;
+					font-style: normal;
+					font-weight: 600;
+					font-size: 28px;
+					line-height: 34px;
+					color: #fff;
+				}
+			}
+
+			.content_sub {
+				display: flex;
+				align-items: center;
+				padding: 5px 5px 5px 20px;
+				background-color: #fff;
+				width: 65%;
+				border-radius: 20px;
+				margin-top: 10px;
+				&-block {
+					display: flex;
+					align-items: center;
+					margin-right: 30px;
+
+					.block_icon {
+						margin-right: 5px;
+					}
+
+					.block_desc {
+						font-family: $main-font;
+						font-style: normal;
+						font-weight: 500;
+						font-size: 15px;
+						line-height: 24px;
+						color: #000;
+					}
+
+					&:last-child {
+						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
+
+	&-meals {
+		position: relative;
+		height: auto;
+		padding: 30px 0 0 0;
+
+		.meals_section-title {
+			font-family: $main-font;
+			font-style: normal;
+			font-weight: 600;
+			font-size: 24px;
+			line-height: 34px;
+			color: #000;
+			margin: 15px 0;
+		}
+	}
+
+	&-sidebar {
+		position: relative;
+		width: calc((100vw * 77 / 100) * 35 / 100);
+		height: auto;
+	}
+}

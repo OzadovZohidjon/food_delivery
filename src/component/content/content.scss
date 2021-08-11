@@ -1,0 +1,11 @@
+$left: calc((100vw - ((100vw * 77 / 100))) / 2);
+
+.main_content {
+	position: absolute;
+	// left: $left;
+	top: 240px;
+	display: flex;
+	flex-direction: column;
+	width: calc((100vw * 77 / 100) * 65 / 100);
+	height: auto;
+}

@@ -1,0 +1,41 @@
+$main-font: "Montserrat", sans-serif;
+
+.top_bar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #fff;
+	max-height: 80px;
+	z-index: 10;
+
+	&-container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 20px 0;
+	}
+
+	&-left,
+	&-right {
+		display: flex;
+		align-items: center;
+	}
+
+	.logo_link {
+		text-decoration: none;
+	}
+
+	&-left,
+	&-content {
+		h3 {
+			font-family: $main-font;
+			font-style: normal;
+			font-weight: 600;
+			font-size: 22px;
+			line-height: 29px;
+			color: #000000;
+			margin-right: 20px;
+		}
+	}
+}

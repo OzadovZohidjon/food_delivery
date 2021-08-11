@@ -1,0 +1,24 @@
+$main-font: "Montserrat", sans-serif;
+
+.cart {
+	position: sticky;
+	top: 69px;
+	right: 0;
+	width: calc((100vw * 77 / 100) * 35 / 100);
+	max-height: calc(100vh - 100px);
+	min-height: 310px;
+	padding: 10px;
+	border-radius: 20px;
+	border: 2px solid #000;
+
+	&_ {
+		h3 {
+			font-family: $main-font;
+			font-style: normal;
+			font-weight: 600;
+			font-size: 20px;
+			line-height: 24px;
+			color: #000;
+		}
+	}
+}

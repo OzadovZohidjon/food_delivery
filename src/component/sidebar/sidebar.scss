@@ -1,0 +1,137 @@
+$main-font: "Montserrat", sans-serif;
+@import "../../mixins.scss";
+
+$right: calc((100vw - ((100vw * 77 / 100))) / 2);
+
+.sidebar {
+	position: fixed;
+	right: $right;
+	top: 240px;
+	display: flex;
+	flex-direction: column;
+	width: calc((100vw * 77 / 100) * 30 / 100);
+
+	&_call-btn {
+		width: 100%;
+		height: auto;
+		padding: 10px;
+		background-color: #fff;
+		border-radius: 77px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 24px;
+		cursor: pointer;
+		transition: all 0.3s ease-in-out;
+
+		.call-btn {
+			width: 60px;
+			height: 60px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 45px;
+			transition: all 0.3s ease-in-out;
+		}
+
+		.call-btn-img {
+			background: #ffc58f;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.call-btn-icon {
+			background: #ef3535;
+		}
+
+		.call-btn-text {
+			h1 {
+				font-family: $main-font;
+				font-style: normal;
+				font-weight: 600;
+				font-size: 24px;
+				line-height: 34px;
+				color: #000000;
+				margin-bottom: 7px;
+			}
+
+			p {
+				font-family: $main-font;
+				font-style: normal;
+				font-weight: 500;
+				font-size: 14px;
+				line-height: 17px;
+				color: #bbbbbb;
+			}
+		}
+
+		&:hover {
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+
+			.call-btn-icon {
+				box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+			}
+		}
+	}
+
+	.sidebar_meals {
+		width: 100%;
+
+		.meals_list {
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: space-between;
+
+			.list_item {
+				width: 45%;
+				background-color: #fff;
+				height: 60px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+				border-radius: 85px;
+				margin-bottom: 24px;
+				cursor: pointer;
+				transition: all 0.3s ease-in-out;
+
+				&:hover {
+					box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+				}
+			}
+
+			.list_link {
+				font-family: $main-font;
+				font-style: normal;
+				font-weight: 600;
+				font-size: 24px;
+				line-height: 34px;
+				color: #000000;
+				background-color: transparent;
+				cursor: pointer;
+			}
+
+			.list_item-big {
+				width: 100%;
+				position: relative;
+				span {
+					&::after {
+						content: "";
+						position: absolute;
+						border-top: 2px solid #000;
+						border-right: 2px solid #000;
+						width: 13px;
+						height: 13px;
+						transform: rotate(45deg);
+						top: 45%;
+						right: 18%;
+					}
+				}
+			}
+		}
+	}
+}
